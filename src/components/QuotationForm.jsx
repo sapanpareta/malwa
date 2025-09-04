@@ -5,7 +5,7 @@ export default function QuotationForm() {
         Request a Quote
       </h2>
 
-      <form className="space-y-4">
+      <form className="space-y-4" name="contact" netlify>
         {/* Name */}
         <div>
           <label className="block mb-1 text-gray-700 dark:text-gray-200">Name</label>
