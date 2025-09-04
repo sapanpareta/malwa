@@ -5,13 +5,23 @@ export default function QuotationForm() {
         Request a Quote
       </h2>
 
-      <form className="space-y-4" name="contact" netlify>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        className="space-y-4"
+      >
+        {/* Hidden input required by Netlify */}
+        <input type="hidden" name="form-name" value="contact" />
+
         {/* Name */}
         <div>
           <label className="block mb-1 text-gray-700 dark:text-gray-200">Name</label>
           <input
             type="text"
+            name="name"
             placeholder="Your Name"
+            required
             className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-indigo-400 focus:outline-none dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600"
           />
         </div>
@@ -21,7 +31,9 @@ export default function QuotationForm() {
           <label className="block mb-1 text-gray-700 dark:text-gray-200">Email</label>
           <input
             type="email"
+            name="email"
             placeholder="Your Email"
+            required
             className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-indigo-400 focus:outline-none dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600"
           />
         </div>
@@ -31,6 +43,7 @@ export default function QuotationForm() {
           <label className="block mb-1 text-gray-700 dark:text-gray-200">Phone</label>
           <input
             type="tel"
+            name="phone"
             placeholder="Your Phone Number"
             className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-indigo-400 focus:outline-none dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600"
           />
@@ -41,6 +54,7 @@ export default function QuotationForm() {
           <label className="block mb-1 text-gray-700 dark:text-gray-200">From</label>
           <input
             type="text"
+            name="from"
             placeholder="City / Location"
             className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-indigo-400 focus:outline-none dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600"
           />
@@ -51,6 +65,7 @@ export default function QuotationForm() {
           <label className="block mb-1 text-gray-700 dark:text-gray-200">To</label>
           <input
             type="text"
+            name="to"
             placeholder="City / Location"
             className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-indigo-400 focus:outline-none dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600"
           />
