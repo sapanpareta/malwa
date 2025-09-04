@@ -1,0 +1,126 @@
+---
+type GalleryImage = { src: string; caption: string };
+
+const images: GalleryImage[] = [
+  { src: '/images/photo-1.jpg', caption: 'Photo 1' },
+  { src: '/images/photo-2.jpg', caption: 'Photo 2' },
+  { src: '/images/photo-3.jpg', caption: 'Photo 3' },
+  { src: '/images/photo-4.jpg', caption: 'Photo 4' },
+  { src: '/images/photo-5.jpg', caption: 'Photo 5' },
+  { src: '/images/photo-6.jpg', caption: 'Photo 6' }
+];
+---
+
+<div class="p-6">
+  <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-100 text-center">
+    Photo Gallery
+  </h2>
+
+  <!-- Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    {images.map((img, idx) => (
+      <div class="overflow-hidden rounded-lg shadow-lg cursor-pointer">
+        <img
+          src={img.src}
+          alt={img.caption}
+          class="w-full h-64 object-cover transform hover:scale-105 transition duration-300"
+          onclick={`openLightbox(${idx})`}
+        />
+      </div>
+    ))}
+  </div>
+
+  <!-- Lightbox Overlay -->
+  <div
+    id="lightbox"
+    class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50 flex-col transition-opacity duration-300"
+  >
+    <!-- Close -->
+    <button
+      class="absolute top-4 right-4 text-white text-3xl font-bold"
+      onclick="closeLightbox()"
+    >
+      ×
+    </button>
+
+    <!-- Previous -->
+    <button
+      class="absolute left-4 text-white text-4xl font-bold"
+      onclick="prevImage()"
+    >
+      ‹
+    </button>
+
+    <!-- Next -->
+    <button
+      class="absolute right-4 text-white text-4xl font-bold"
+      onclick="nextImage()"
+    >
+      ›
+    </button>
+
+    <!-- Image -->
+    <img
+      id="lightbox-img"
+      class="max-h-[70%] max-w-[90%] rounded-lg shadow-lg transition-opacity duration-300"
+    />
+
+    <!-- Caption -->
+    <p
+      id="lightbox-caption"
+      class="mt-4 text-white text-lg text-center"
+    ></p>
+  </div>
+</div>
+
+<script type="module" client:load>
+  window.addEventListener('DOMContentLoaded', () => {
+    const galleryImages = [
+  { src: '/images/photo-1.jpg', caption: 'Photo 1' },
+  { src: '/images/photo-2.jpg', caption: 'Photo 2' },
+  { src: '/images/photo-3.jpg', caption: 'Photo 3' },
+  { src: '/images/photo-4.jpg', caption: 'Photo 4' },
+  { src: '/images/photo-5.jpg', caption: 'Photo 5' },
+  { src: '/images/photo-6.jpg', caption: 'Photo 6' }
+    ];
+
+    let currentIndex = 0;
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    window.openLightbox = (index) => {
+      currentIndex = index;
+      updateLightbox();
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+    };
+
+    window.closeLightbox = () => {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+    };
+
+    window.nextImage = () => {
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      updateLightbox();
+    };
+
+    window.prevImage = () => {
+      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      updateLightbox();
+    };
+
+    function updateLightbox() {
+      lightboxImg.src = galleryImages[currentIndex].src;
+      lightboxCaption.textContent = galleryImages[currentIndex].caption;
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.classList.contains('hidden')) return;
+      if (e.key === 'Escape') window.closeLightbox();
+      if (e.key === 'ArrowRight') window.nextImage();
+      if (e.key === 'ArrowLeft') window.prevImage();
+    });
+  });
+</script>

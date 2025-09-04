@@ -2,6 +2,8 @@
 import "../styles/global.css";
 import Header from "../components/Header.jsx";
 import QuotationFrom from "../components/QuotationForm.jsx";
+import Services from "../components/Services.astro";
+import PhotoGallery from "../components/PhotoGallery.astro"
 ---
 
 <html lang="en" class="dark">
@@ -12,7 +14,7 @@ import QuotationFrom from "../components/QuotationForm.jsx";
     <title>Document</title>
   </head>
 
-  <body class=" bg-background text-content">
+  <body class="bg-background text-content">
     <Header client:load />
 
     <main class="pt-16">
@@ -20,21 +22,21 @@ import QuotationFrom from "../components/QuotationForm.jsx";
         <div class="sp-container grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div class="flex flex-col justify-center">
             <h1>
-            We Are Trusted & Verified IBA Approved Packers and Movers for a
-            Hassle-Free Relocation!
-          </h1>
-          <p>
-            Malwa Roadways Packers and Movers Indore – Reliable Name for Home
-            Shifting, Local and Nationwide.
-          </p>
+             No.1 Packers and Movers Indore – Local Experts for Home Shifting
+            </h1>
+            <p>
+              Malwa Roadways Packers and Movers Indore – Reliable Name for Home
+              Shifting, Local and Nationwide.
+            </p>
           </div>
 
           <div>
-          <QuotationFrom />
+            <QuotationFrom />
           </div>
-          
         </div>
       </section>
+          <Services />
+          <PhotoGallery client:load />  
     </main>
   </body>
 </html>
