@@ -19,13 +19,13 @@ export default function Header() {
           <a href="/" className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 transition">
             Home
           </a>
-          <a href="about" className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 transition">
+          <a href="/about" className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 transition">
             About
           </a>
-          <a href="services" className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 transition">
+          <a href="/services" className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 transition">
             Services
           </a>
-          <a href="contact" className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 transition">
+          <a href="/contact" className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 transition">
             Contact
           </a>
           <ThemeSwitch /> {/* Desktop toggle */}
