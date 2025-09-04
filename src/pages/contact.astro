@@ -1,0 +1,33 @@
+---
+
+import "../styles/global.css";
+import Header from "../components/Header.jsx";
+
+---
+
+
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Document</title>
+  </head>
+
+  <body class="debug bg-background text-content debug">
+    
+    <Header client:load />
+    
+  <main class="pt-16">
+<section>
+  <div class="sp-container">
+    <h1>Hello</h1>
+  </div>
+</section>
+  
+</main>
+   
+
+ 
+  </body>
+</html>
