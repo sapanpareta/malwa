@@ -6,12 +6,12 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-background border-b border-border fixed top-0 left-0 w-full z-50 font-sans">
+    <header className="bg-background border-b border-border fixed top-0 left-0 w-full z-50 font-sans px-4 sm:px-6 lg:px-8 xl:px-12">
       <div className="sp-container flex items-center justify-between h-16">
         
         {/* Logo */}
-        <a href="#" className="text-2xl font-bold text-primary dark:text-primary">
-          MyBrand
+        <a href="/" className="text-2xl font-bold text-primary dark:text-primary">
+          Malwa Roadways
         </a>
 
         {/* Desktop Nav */}
@@ -58,10 +58,10 @@ export default function Header() {
           </button>
         </div>
         <nav className="flex flex-col p-4 space-y-4">
-          <a href="#" className="text-content hover:text-primary transition">Home</a>
-          <a href="#" className="text-content hover:text-primary transition">About</a>
-          <a href="#" className="text-content hover:text-primary transition">Services</a>
-          <a href="#" className="text-content hover:text-primary transition">Contact</a>
+          <a href="/" className="text-content hover:text-primary transition">Home</a>
+          <a href="/about" className="text-content hover:text-primary transition">About</a>
+          <a href="/services" className="text-content hover:text-primary transition">Services</a>
+          <a href="/contact" className="text-content hover:text-primary transition">Contact</a>
         </nav>
       </div>
     </header>
