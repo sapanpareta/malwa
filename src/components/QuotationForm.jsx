@@ -1,6 +1,6 @@
 export default function QuotationForm() {
   return (
-    <div className="p-6 bg-slate-300 dark:bg-gray-800 rounded-xl shadow-lg">
+    <div className="p-6 bg-secondary rounded-xl shadow-lg border border-border">
       <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-100 text-center">
         Request a Quote
       </h2>

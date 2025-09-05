@@ -4,6 +4,7 @@ import Header from "../components/Header.jsx";
 import QuotationFrom from "../components/QuotationForm.jsx";
 import Services from "../components/Services.astro";
 import PhotoGallery from "../components/PhotoGallery.astro"
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en" class="dark">
@@ -39,6 +40,8 @@ import PhotoGallery from "../components/PhotoGallery.astro"
           <section>
             <PhotoGallery client:load />  
           </section>
+
     </main>
+    <Footer />
   </body>
 </html>
