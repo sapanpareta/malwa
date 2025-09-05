@@ -3,7 +3,7 @@ import "../styles/global.css";
 import Header from "../components/Header.jsx";
 import QuotationFrom from "../components/QuotationForm.jsx";
 import Services from "../components/Services.astro";
-import PhotoGallery from "../components/PhotoGallery.astro"
+import PhotoGallery from "../components/PhotoGallery.astro";
 import Footer from "../components/Footer.astro";
 ---
 
@@ -23,7 +23,7 @@ import Footer from "../components/Footer.astro";
         <div class="sp-container grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div class="flex flex-col justify-center">
             <h1>
-             No.1 Packers and Movers Indore – Local Experts for Home Shifting
+              No.1 Packers and Movers Indore – Local Experts for Home Shifting
             </h1>
             <p>
               Malwa Roadways Packers and Movers Indore – Reliable Name for Home
@@ -37,8 +37,27 @@ import Footer from "../components/Footer.astro";
         </div>
       </section>
       <Services />
-      <PhotoGallery client:load /> 
+      <PhotoGallery client:load />
 
+      <section>
+        <div class="sp-container mb-10 text-center">
+          <h2
+            class="bg-gradient-to-tr from-pink-400 to-purple-500 bg-clip-text text-transparent"
+          >
+            Find Us On Google Map
+          </h2>
+        </div>
+        <div class="sp-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d58861.45437538074!2d75.883906!3d22.771285!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396302b8fc14d4ab%3A0x78241a7f973a4ddf!2sMalwa%20Roadways%20Packers%20and%20Movers!5e0!3m2!1sen!2sin!4v1757054638606!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
     </main>
     <Footer />
   </body>
