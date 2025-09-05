@@ -3,25 +3,27 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-primary: #166534;    /* Forest green, softer than original */
+  --color-primary: var(--color-indigo-600);    /* Forest green, softer than original */
   --color-muted: #e5e5e5;      /* Light gray for subtle elements */
   --color-tertiary: #94a3b8;   /* Slate blue-gray, Notion-like */
   --color-surface: #ffffff;    /* Pure white for surfaces */
   --color-accent: #64748b;     /* Grayscale accent with bluish tint */
-  --color-secondary: #dcfce7;  /* Very light green for highlights */
-  --color-content: #0f172a;    /* Almost black, but softer */
-  --color-background: #fafafa; /* Off-white background, Notion-like */
+  --color-border: var(--color-gray-300);  /* Very light green for highlights */
+  --color-content: var(--color-slate-950);    /* Almost black, but softer */
+  --color-background: var(--color-slate-50); /* Off-white background, Notion-like */
+ 
 }
 
 .dark {
-  --color-primary: #4ade80;    /* Brighter green for dark mode */
+  --color-primary: var(--color-indigo-600);    /* Brighter green for dark mode */
   --color-muted: #334155;      /* Muted slate color */
   --color-tertiary: #64748b;   /* Medium gray with blue tint */
   --color-surface: #1e293b;    /* Dark blue-gray for surfaces */
   --color-accent: #94a3b8;     /* Medium-light gray accent */
-  --color-secondary: #064e3b;  /* Dark teal-green */
-  --color-content: #f1f5f9;    /* Off-white text */
-  --color-background: rgb(13 15 20 / var(--tw-bg-opacity, 1)); /* Very dark blue-gray background */
+  --color-border: var(--color-gray-700);  /* Dark teal-green */
+  --color-content: var(--color-slate-50);    /* Off-white text */
+  --color-background: var(--color-slate-950); /* Very dark blue-gray background */
+ 
 }
 
 
@@ -36,7 +38,7 @@
 
   /* Headings */
   h1 {
-    @apply text-4xl sm:text-5xl font-bold leading-tight text-[--color-text];
+    @apply text-4xl sm:text-5xl font-bold leading-tight text-[--color-content];
   }
   h2 {
     @apply text-3xl sm:text-4xl font-semibold leading-snug;

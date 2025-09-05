@@ -11,7 +11,7 @@ const images: GalleryImage[] = [
 ];
 ---
 
-<div class="p-6">
+<div class="p-6 sp-container">
   <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-100 text-center">
     Photo Gallery
   </h2>
@@ -73,7 +73,7 @@ const images: GalleryImage[] = [
   </div>
 </div>
 
-<script type="module" client:load>
+<script type="module">
   window.addEventListener('DOMContentLoaded', () => {
     const galleryImages = [
   { src: '/images/photo-1.jpg', caption: 'Photo 1' },
