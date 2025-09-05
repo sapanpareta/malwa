@@ -1,0 +1,34 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header"
+import Footer from "../components/Footer.astro"
+---
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Document</title>
+  </head>
+
+  <body class=" bg-background text-content">
+    <Header client:load />
+
+    <main class="pt-16">
+
+        <section class="py-32 space-y-12">
+            <div class="sp-container">
+            <h1 class="text-center">Thank You</h1>
+            <p class="text-center">Thank you for your message. We will get in touch with you shortly</p>
+        </div>
+            <div class="sp-container grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/E4cnDrd3rdk?si=Lo-IXscGHDfsbHmM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/0rk7U5NNljg?si=sUNFSFu0iNFc5otf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/PM6bsNsqt5Y?si=M4hhkuGqmvHdMtW2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+       
+    </main>
+     <Footer />
+  </body>
+</html>

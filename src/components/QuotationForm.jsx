@@ -9,6 +9,7 @@ export default function QuotationForm() {
         name="contact"
         method="POST"
         data-netlify="true"
+        action="/thank-you"
         className="space-y-4"
       >
         {/* Hidden input required by Netlify */}
