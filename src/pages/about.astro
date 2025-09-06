@@ -1,23 +1,9 @@
 ---
-import "../styles/global.css";
-import Header from "../components/Header.jsx";
-import Footer from "../components/Footer.astro";
+import BaseLayout from "../layouts/BaseLayout.astro"
 ---
 
-<html lang="en" class="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>About - Malwa Packers and Movers</title>
-    
-  </head>
-
-  <body class="bg-background text-content">
-    <Header client:load />
-
-    <main class="pt-16">
-      <section>
+<BaseLayout>
+<section>
         <div class="sp-container flex flex-col space-y-6">
           <h2>Our Story: Building Trust One Move at a Time</h2>
           Dear Valued Customer, I'm Sapan Pareta, founder of Malwa Roadways Packers
@@ -95,7 +81,4 @@ import Footer from "../components/Footer.astro";
           We look forward to making your next move your best move.
         </div>
       </section>
-      <Footer />
-    </main>
-  </body>
-</html>
+</BaseLayout>
