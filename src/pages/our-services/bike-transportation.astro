@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import QuotationFrom from "../../components/QuotationForm.jsx";
+import PhotoGallery from "../../components/PhotoGallery.astro";
+---
+<BaseLayout title="Bike Shifting / Transportation">
+  <section>
+    <div class="sp-container grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div class="flex flex-col justify-center">
+        <span class="text-white bg-gradient-to-r from-red-500 to-pink-500 px-4 py-2 rounded-full w-fit text-shadow-black">
+          इंदौर का भरोसेमंद पैकर्स & मूवर्स | Malwa Roadways
+        </span>
+        <h1>
+        Fast & Secure Bike Transportation You Can Trust
+      </h1>
+        <p class="text-xl">
+         Get your two-wheeler transported safely across cities. Our expert team ensures damage-free packing, safe handling, and timely delivery at pocket-friendly prices.
+        </p>
+      </div>
+
+      <div>
+        <QuotationFrom />
+      </div>
+    </div>
+  </section>
+  <PhotoGallery/>
+
+</BaseLayout>

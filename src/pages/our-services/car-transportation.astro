@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import QuotationFrom from "../../components/QuotationForm.jsx";
+import PhotoGallery from "../../components/PhotoGallery.astro";
+---
+
+<BaseLayout title="Car Transportation Indore to All India">
+  <section>
+    <div class="sp-container grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div class="flex flex-col justify-center">
+        <span class="text-white bg-gradient-to-r from-red-500 to-pink-500 px-4 py-2 rounded-full w-fit text-shadow-black">
+          इंदौर का भरोसेमंद पैकर्स & मूवर्स | Malwa Roadways
+        </span>
+        <h1>Safe & Affordable Car Transportation Services</h1>
+        <p>
+          Move your car anywhere in India with complete safety. We use
+          specialized carriers for scratch-free, damage-free, and on-time car
+          transportation—giving you peace of mind every mile.
+        </p>
+      </div>
+
+      <div>
+        <QuotationFrom />
+      </div>
+    </div>
+  </section>
+  <PhotoGallery />
+</BaseLayout>
